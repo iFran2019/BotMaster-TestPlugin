@@ -23,6 +23,6 @@ public class TestCMD extends Command {
 
     @Override
     public void onExecute(SlashCommandInteractionEvent e) {
-        e.reply("¡Hola desde el comando Test! Output: "+option1).queue();
+        e.reply("¡Test! Output: "+option1).queue();
     }
 }

@@ -3,18 +3,23 @@ package i.fran2019.Test;
 import i.fran2019.BotMaster.API.implementations.Plugin;
 import i.fran2019.BotMaster.BotMaster;
 import i.fran2019.Test.Commands.TestCMD;
+import i.fran2019.Test.Manager.ConfigManagerTest;
 import lombok.Getter;
 
 @Getter public class Test extends Plugin {
     private final Test test = this;
+    private ConfigManagerTest configManagerTest;
 
-    public Test(BotMaster botMaster, String name, String description) {
-        super(botMaster, name, description);
+    public Test(BotMaster botMaster, String name, String description, String version) {
+        super(botMaster, name, description, version);
     }
 
     @Override
     public void onEnable() {
-        getBotMaster().getCommandManager().registerCommand(new TestCMD("test2"));
+        configManagerTest = new ConfigManagerTest(getConfigManager());
+
+        getBotMaster().getCommandManager().registerCommand(new TestCMD(configManagerTest.CONFIG_1));
+
         getLogger().info("Plugin Loaded");
     }
 

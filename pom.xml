@@ -6,7 +6,7 @@
 
     <groupId>i.fran2019.sigma</groupId>
     <artifactId>TestPlugin</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <repositories>
         <repository>
             <id>central</id>
@@ -24,7 +24,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <finalName>TestPlugin-1.0.0</finalName>
+                    <finalName>TestPlugin-1.0.1</finalName>
                 </configuration>
                 <executions>
                     <execution>
@@ -35,6 +35,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -50,7 +58,7 @@
             <artifactId>BotMasterDC</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/BotMasterDC-1.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/libs/BotMasterDC-1.0.1.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

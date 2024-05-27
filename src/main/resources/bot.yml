@@ -1,3 +1,4 @@
 main: i.fran2019.Test.Test
 name: TestPlugin
 description: TestDescription
+version: 1.0.1
