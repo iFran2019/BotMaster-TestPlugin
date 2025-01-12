@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>i.fran2019.sigma</groupId>
+    <groupId>i.fran2019.test</groupId>
     <artifactId>TestPlugin</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.5</version>
     <repositories>
         <repository>
             <id>central</id>
@@ -24,7 +24,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <finalName>TestPlugin-1.0.1</finalName>
+                    <finalName>TestPlugin-1.0.5</finalName>
                 </configuration>
                 <executions>
                     <execution>
@@ -58,7 +58,7 @@
             <artifactId>BotMasterDC</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/BotMasterDC-1.0.1.jar</systemPath>
+            <systemPath>${project.basedir}/libs/BotMasterDC-1.0.5.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

@@ -2,7 +2,9 @@ package i.fran2019.Test;
 
 import i.fran2019.BotMaster.API.implementations.Plugin;
 import i.fran2019.BotMaster.BotMaster;
+import i.fran2019.Solary.Commands.StatsCMD;
 import i.fran2019.Test.Commands.TestCMD;
+import i.fran2019.Test.Manager.ButtonClickEvent;
 import i.fran2019.Test.Manager.ConfigManagerTest;
 import lombok.Getter;
 
@@ -18,7 +20,10 @@ import lombok.Getter;
     public void onEnable() {
         configManagerTest = new ConfigManagerTest(getConfigManager());
 
+        getBotMaster().getCommandManager().registerCommand(new StatsCMD("stats"));
         getBotMaster().getCommandManager().registerCommand(new TestCMD(configManagerTest.CONFIG_1));
+
+        getBotMaster().getJda().addEventListener(new ButtonClickEvent());
 
         getLogger().info("Plugin Loaded");
     }
